@@ -19,14 +19,14 @@
     <div class="container border" style="background-color:skyblue;font-family: 'Times New Roman', Times, serif;"> 
         <p>Click on the locations to search for treasure, beware the traps</p>
     </div>
-    <div class="container border"  style="background-color: violet;font-family: 'Times New Roman', Times, serif;">
+    <div class="container border" id="locations"  style="background-color: violet;font-family: 'Times New Roman', Times, serif;">
         <p id="locations">Number of locations checked is zero</p>
     </div>
-    <div class="container border"  style="background-color:red;font-family: 'Times New Roman', Times, serif;">
+    <div class="container border" id="penalty" style="background-color:red;font-family: 'Times New Roman', Times, serif;">
         <p id="penalty">Penalty is zero</p>
     </div>
-    <div class="container border"  style="background-color: orange;font-family: 'Times New Roman', Times, serif;">
-        <p>Click for help</p>
+    <div class="container border"  id="help" style="background-color: orange;font-family: 'Times New Roman', Times, serif;">
+        <p onclick="help()">Click for help</p>
     </div>
     <div class="container border"  style="background-color: olive;font-family: 'Times New Roman', Times, serif;">
         <p id="help">Help report</p>
@@ -35,43 +35,99 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-1" onclick="check(24)"><img  id="check0" src="start.png" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(25)"><img  id="check0" src="start.png" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(26)" ><img  id="check1" src="start.png" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(27)" ><img  id="check2" src="start.png" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(28)" ><img  id="check3" src="start.png" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(0)"><img  id="check0" src="start.png" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(1)"><img  id="check1" src="start.png" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(2)" ><img  id="check2" src="start.png" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(3)" ><img  id="check3" src="start.png" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(4)" ><img  id="check4" src="start.png" height="100" width="100"></div>
         </div>
-        <div class="row ">
-            <div class="col-sm-1" onclick="check(0)"><img  id="check0" src="location.jpg" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(1)" ><img  id="check1" src="location.jpg" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(2)" ><img  id="check2" src="location.jpg" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(3)" ><img  id="check3" src="location.jpg" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(4)" ><img  id="check4" src="location.jpg" height="100" width="100"></div>
+        <div class="row">
+            <div class="col-sm-1" onclick="check(5)"><img  id="check5" src="location.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(6)" ><img  id="check6" src="location.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(7)" ><img  id="check7" src="location.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(8)" ><img  id="check8" src="location.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(9)" ><img  id="check9" src="location.jpg" height="100" width="100"></div>
             
         </div>
         <div class="row ">
-            <div class="col-sm-1" onclick="check(7)"><img  id="check7" src="treasure.jpg" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(8)" ><img  id="check8" src="treasure.jpg" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(9)" ><img  id="check9" src="treasure.jpg" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(10)" ><img  id="check10" src="treasure.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(10)"><img  id="check10" src="treasure.jpg" height="100" width="100"></div>
             <div class="col-sm-1" onclick="check(11)" ><img  id="check11" src="treasure.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(12)" ><img  id="check12" src="treasure.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(13)" ><img  id="check13" src="treasure.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(14)" ><img  id="check14" src="treasure.jpg" height="100" width="100"></div>
         </div>
         <div class="row ">
-            <div class="col-sm-1" onclick="check(13)" ><img id="check13" src="trap.jpeg" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(14)" ><img id="check14" src="trap.jpeg" height="100" width="100"></div>
             <div class="col-sm-1" onclick="check(15)" ><img id="check15" src="trap.jpeg" height="100" width="100"></div>
             <div class="col-sm-1" onclick="check(16)" ><img id="check16" src="trap.jpeg" height="100" width="100"></div>
             <div class="col-sm-1" onclick="check(17)" ><img id="check17" src="trap.jpeg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(18)" ><img id="check18" src="trap.jpeg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(19)" ><img id="check19" src="trap.jpeg" height="100" width="100"></div>
         </div>
         <div class="row ">
-            <div class="col-sm-1" onclick="check(19)" ><img  id="check19" src="pirate.jpg" height="100" width="100"></div>
             <div class="col-sm-1" onclick="check(20)" ><img  id="check20" src="pirate.jpg" height="100" width="100"></div>
             <div class="col-sm-1" onclick="check(21)" ><img  id="check21" src="pirate.jpg" height="100" width="100"></div>
-            <div class="col-sm-1" onclick="check(22)" ><img  id="check2" src="pirate.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(22)" ><img  id="check22" src="pirate.jpg" height="100" width="100"></div>
             <div class="col-sm-1" onclick="check(23)" ><img  id="check23" src="pirate.jpg" height="100" width="100"></div>
+            <div class="col-sm-1" onclick="check(24)" ><img  id="check24" src="pirate.jpg" height="100" width="100"></div>
         </div>
 
+        <script>
+            const ids = ["check0","check1","check2","check3","check4","check5","check6","check7","check8","check9","check10","check11","check12","check13","check14","check15","check16","check17","check18","check19","check20","check21","check22","check23","check24"]
+            var checkCount = 0;
+            var penalty = 0;
+            var lastCheck = 0;
+            var treasureLocation = 5;
+            var trapLocation = 18;
+            var gameOver = false;
 
+            function check(position){
+                if(gameOver){
+                    return;
+                }
+                
+                const check_no = document.getElementById(ids[position]);
+                if(position == treasureLocation){
+                    check_no.src = "treasure.jpg";
+                    gameOver = true;
+                    penalty -= 3;
+                }
+                else if(position == trapLocation){
+                    check_no.src = "realtrap.png";
+                    gameOver = true;
+                    penalty += 4;
+                }
+                else{
+                    check_no.src = "block.jpeg";
+                }
+
+                checkCount++;
+                penalty++;
+                document.getElementById("locations").innerHTML = "Number of locations checked is " + checkCount;
+                document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
+                lastCheck = position;
+            }
+
+            function help() {
+                if (gameOver) {
+                    return;
+                }
+                let treasureRow = Math.floor(treasureLocation / 5);
+                let treasureCol = treasureLocation % 5;
+                let lastLocationRow = Math.floor(lastCheck / 5);
+                let lastLocationCol = lastCheck % 5;
+
+                if (Math.abs(treasureRow - lastLocationRow) <= 1 && Math.abs(treasureCol - lastLocationCol) <= 1) {
+                    document.getElementById("help").innerHTML = "Can smell it";
+                } else if (Math.abs(treasureRow - lastLocationRow) + Math.abs(treasureCol - lastLocationCol) === 2) {
+                    document.getElementById("help").innerHTML = "Close Matie";
+                } else {
+                    document.getElementById("help").innerHTML = "Step Faster";
+                }
+                penalty += 2;
+                document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
+            }
+
+        </script>
 
 </body>
 </html>
